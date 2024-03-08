@@ -13,7 +13,7 @@ with all_values as (
         {%- if group_by -%}
         {{ group_by | join(", ") }},
         {%- endif %}
-        {{ column_name }} as value_field
+        "{{ column_name }}" as value_field
     from {{ model }}
     {% if row_condition %}
     where {{ row_condition }}

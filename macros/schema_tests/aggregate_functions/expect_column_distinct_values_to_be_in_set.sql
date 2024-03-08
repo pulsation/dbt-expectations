@@ -8,7 +8,7 @@
 with all_values as (
 
     select distinct
-        {{ column_name }} as value_field
+        "{{ column_name }}" as value_field
 
     from {{ model }}
     {% if row_condition %}
